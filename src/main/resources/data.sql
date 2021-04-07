@@ -1,0 +1,2 @@
+insert into customer (full_name,status,coupons_alloted,membership_start_date,membership_end_date,payment_status,payment_percentage,sales_executive_name) values ("Swapnil K","Inactive",2,"04/05/1990","04/05/2020","PENDING",45,"Vipul P");
+insert into customer (COUPONS_ALLOTED,FULL_NAME,MEMBERSHIP_END_DATE,MEMBERSHIP_START_DATE,PAYMENT_PERCENTAGE,PAYMENT_STATUS,SALES_EXECUTIVE_NAME,STATUS) values ("Pratik N","Active",3,"04/05/1990","99/99/9999","DONE",100,"Vipul P");

@@ -3,6 +3,7 @@ package com.auditapp.customerservice.service;
 import com.auditapp.customerservice.entity.Customer;
 import com.auditapp.customerservice.repository.CustomerRepository;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,4 +26,9 @@ public class CustomerService {
     public Optional<Customer> findCustomerById(Long customerId) {
         return customerRepository.findById(customerId);
     }
+
+	public List<Customer> findAllCustomers(String name) {
+		// TODO Auto-generated method stub
+		return customerRepository.findAll();
+	}
 }

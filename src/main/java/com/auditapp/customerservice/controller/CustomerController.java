@@ -4,6 +4,7 @@ import com.auditapp.customerservice.entity.Customer;
 import com.auditapp.customerservice.service.CustomerService;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,13 @@ public class CustomerController {
     public Optional<Customer> findCustomerById(@PathVariable("id") Long customerId){
         log.info("Inside findCustomerById of CustomerController.");
         return customerService.findCustomerById(customerId);
+    }
+    
+    @GetMapping("")
+    public List<Customer> findAllCustomers(@PathVariable("name") String name) {
+    	log.info("Inside findAllCustomers of CustomerController.");
+    	return customerService.findAllCustomers(name);
+    	
     }
 
 }
