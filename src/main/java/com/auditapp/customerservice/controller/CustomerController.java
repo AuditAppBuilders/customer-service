@@ -22,18 +22,26 @@ public class CustomerController {
     public Customer saveCustomer(@RequestBody Customer customer){
         log.info("Inside saveCustomer of CustomerController.");
         return customerService.saveCustomer(customer);
+        log.info
     }
 
-    @GetMapping("/{id}")
-    public Optional<Customer> findCustomerById(@PathVariable("id") Long customerId){
+    @GetMapping("/byId/{customerId}")
+    public Optional<Customer> findCustomerById(@PathVariable("customerId") Long customerId){
         log.info("Inside findCustomerById of CustomerController.");
         return customerService.findCustomerById(customerId);
     }
     
-    @GetMapping("")
-    public List<Customer> findAllCustomers(@PathVariable("name") String name) {
+    @GetMapping("/")
+    public List<Customer> findAllCustomers() {
     	log.info("Inside findAllCustomers of CustomerController.");
-    	return customerService.findAllCustomers(name);
+    	return customerService.findAllCustomers();
+    	
+    }
+    
+    @GetMapping("/byName/{name}")
+    public List<Customer> findCustomerByName(@PathVariable("name") String name) {
+    	log.info("Inside findCustomerByName of CustomerController.");
+    	return customerService.findCustomerByName(name);
     	
     }
 
